@@ -1,17 +1,22 @@
 package tarea1;
 
 public class Ingredientes {
+
 	private String nombre;
-	private String cantidad;
+	private float cantidad;
+	private String unidad;
+	
+	public Ingredientes(String nombre, float cantidad, String unidad) {
+		this.nombre = nombre;
+		this.cantidad = cantidad;
+		this.unidad = unidad;
+	}
 	
 	public Ingredientes() {
 		
 	}
 
-	public Ingredientes(String nombre, String cantidad) {
-		this.nombre = nombre;
-		this.cantidad = cantidad;
-	}
+
 
 	public String getNombre() {
 		return nombre;
@@ -21,11 +26,11 @@ public class Ingredientes {
 		this.nombre = nombre;
 	}
 
-	public String getCantidad() {
+	public float getCantidad() {
 		return cantidad;
 	}
 
-	public void setCantidad(String cantidad) {
+	public void setCantidad(float cantidad) {
 		this.cantidad = cantidad;
 	}
 }
