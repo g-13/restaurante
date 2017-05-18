@@ -1,16 +1,18 @@
 package tarea1;
 
+import java.util.ArrayList;
+
 public class Receta {
 
 	private String nombre;
-	private String ingredientes;
+	private ArrayList<Ingredientes> ingredientes;
 	private String preparacion;
 	
 	public Receta() {
 		
 	}
 
-	public Receta(String nombre, String ingredientes, String preparacion) {
+	public Receta(String nombre, ArrayList<Ingredientes> ingredientes, String preparacion) {
 	
 		this.nombre = nombre;
 		this.ingredientes = ingredientes;
@@ -25,11 +27,11 @@ public class Receta {
 		this.nombre = nombre;
 	}
 
-	public String getIngredientes() {
+	public ArrayList<Ingredientes> getIngredientes() {
 		return ingredientes;
 	}
 
-	public void setIngredientes(String ingredientes) {
+	public void setIngredientes(ArrayList<Ingredientes> ingredientes) {
 		this.ingredientes = ingredientes;
 	}
 
