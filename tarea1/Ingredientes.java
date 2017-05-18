@@ -44,7 +44,10 @@ public class Ingredientes {
 	}
 
 	public String toString() {
-		return "nombre: " + nombre + "\ncantidad: " + cantidad + "\nunidad " + unidad ;
+		return "nombre: " + nombre + " cantidad: " + cantidad + unidad ;
 	}
-
+	public static void main(String[] args) {
+		Ingredientes ingrediente = new Ingredientes("Tomates",3, "kg");
+		System.out.println(ingrediente.toString());
+	}
 }
