@@ -1,5 +1,6 @@
 package tarea1;
 
+
 public class Ingredientes {
 
 	private String nombre;
@@ -41,4 +42,9 @@ public class Ingredientes {
 	public void setUnidad(String unidad) {
 		this.unidad = unidad;
 	}
+
+	public String toString() {
+		return "nombre: " + nombre + "\ncantidad: " + cantidad + "\nunidad " + unidad ;
+	}
+
 }
