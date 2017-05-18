@@ -33,4 +33,12 @@ public class Ingredientes {
 	public void setCantidad(float cantidad) {
 		this.cantidad = cantidad;
 	}
+
+	public String getUnidad() {
+		return unidad;
+	}
+
+	public void setUnidad(String unidad) {
+		this.unidad = unidad;
+	}
 }
