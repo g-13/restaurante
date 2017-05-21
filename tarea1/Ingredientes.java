@@ -1,5 +1,6 @@
 package tarea1;
 
+import java.util.ArrayList;
 
 public class Ingredientes {
 
@@ -47,7 +48,17 @@ public class Ingredientes {
 		return "nombre: " + nombre + " cantidad: " + cantidad + unidad ;
 	}
 	public static void main(String[] args) {
+		ArrayList<Ingredientes>mejunjes = new ArrayList<Ingredientes>();
+		ArrayList<String>preparate = new ArrayList<String>();
 		Ingredientes ingrediente = new Ingredientes("Tomates",3, "kg");
 		System.out.println(ingrediente.toString());
+		Receta receta = new Receta("yema", mejunjes, preparate);
+		Ingredientes ingrediente3 = new Ingredientes("Calabacin", 2, "kg");
+		Ingredientes ingrediente2 = new Ingredientes("tenaya", 2, "Gr");
+		receta.addIngrediente(ingrediente3);
+		receta.addPreparacion("Preparamos como nos da la gana");
+		receta.addIngrediente(ingrediente2);
+		receta.addPreparacion("Se cortan las peladas y go");
+		System.out.println(receta.toString());
 	}
 }

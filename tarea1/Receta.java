@@ -52,4 +52,25 @@ public class Receta {
 	public void addPreparacion(String preparacion){
 		this.preparacion.add(preparacion);
 	}
+	
+	public String listarIngredientes(){
+		String acumulador = "";
+		for (int i = 0; i < ingredientes.size(); i++) {
+			acumulador = acumulador +"\t"+" "+ ingredientes.get(i).toString()+"\n";  
+		}
+		return acumulador;
+	}
+	
+	public String listarPreparacion(){
+		String acumulador = "";
+		for (int i = 0; i < preparacion.size(); i++) {
+			acumulador = acumulador +"\t" +"PASO " + i + ": " + preparacion.get(i)+"\n";
+		}
+		return acumulador;
+	}
+	
+	public String toString(){
+		return nombre.toUpperCase()+ "\n"+ "Ingredientes:\n"+ listarIngredientes()+"\n"+"Preparacion:\n"+listarPreparacion();
+	}
+	
 }
