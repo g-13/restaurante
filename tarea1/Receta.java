@@ -8,7 +8,8 @@ public class Receta {
 
 	private ArrayList<String> preparacion;
 	private ArrayList<Ingredientes> ingredientes;
-
+	private int persona = 4;
+	private String autor;
 	
 	public Receta() {
 		
