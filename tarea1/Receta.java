@@ -73,5 +73,19 @@ public class Receta {
 	public String toString(){
 		return nombre.toUpperCase()+ "\n"+ "Ingredientes:\n"+ listarIngredientes()+"\n"+"Preparacion:\n"+listarPreparacion();
 	}
+
+
+	public Receta recetaPara (int numPersonas){
+		
+		float ingrediente = 0;
+		Receta r = new Receta(nombre, ingredientes, preparacion);
+		for (int i = 0; i < ingredientes.size(); i++) {
+			 ingrediente = ingredientes.get(i).getCantidad()/persona;
+			 r.ingredientes.get(i).setCantidad(ingrediente*numPersonas);
+		}
+	
+		return r;
+	}
+	
 	
 }
